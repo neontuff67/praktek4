@@ -1,0 +1,275 @@
+:root {
+  --dusty-950: #1d2c38;
+  --dusty-900: #2a3f4f;
+  --dusty-850: #3a5266;
+  --dusty-700: #567187;
+  --dusty-600: #698ca6;
+  --dusty-500: #7a9bb3;
+  --dusty-400: #9bb6c9;
+  --dusty-300: #bfd3df;
+  --garis: #7d9aae;
+  --teks-utama: #edf4f8;
+  --teks-lembut: #d4e1ea;
+  --teks-samar: #adc3d0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(160deg, var(--dusty-950) 0%, var(--dusty-900) 55%, #48677d 100%);
+  background-attachment: fixed;
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  color: var(--teks-utama);
+}
+
+::selection {
+  background: var(--dusty-300);
+  color: var(--dusty-950);
+}
+
+.container {
+  background-color: var(--dusty-900);
+  border: 1px solid var(--dusty-700);
+  padding: 34px;
+  border-radius: 14px;
+  box-shadow: 0 14px 40px rgba(16, 29, 38, 0.45);
+  width: 100%;
+  max-width: 680px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Garis aksen gradasi di atas kartu */
+.container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--dusty-700), var(--dusty-400), var(--dusty-300));
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  color: #f0f5fd;
+  font-size: 1.55rem;
+  margin: 6px 0 8px;
+  position: relative;
+  padding-bottom: 14px;
+}
+
+/* Garis kecil di bawah judul */
+h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 64px;
+  height: 4px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, var(--dusty-400), var(--dusty-300));
+}
+
+h2 {
+  font-size: 1.15rem;
+  margin-top: 32px;
+  border-top: 1px solid rgba(191, 211, 223, 0.25);
+  padding-top: 22px;
+  color: #dfeaf1;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: var(--teks-lembut);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--dusty-850);
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: var(--teks-utama);
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.search-box {
+  margin: 20px 0 18px;
+}
+
+.search-box label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--teks-lembut);
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.search-controls input {
+  flex: 1;
+  padding: 10px 12px;
+  background-color: var(--dusty-850);
+  border: 1px solid var(--garis);
+  border-radius: 8px;
+  color: var(--teks-utama);
+  font-size: 14px;
+}
+
+.search-controls input::placeholder {
+  color: #7b98ab;
+}
+
+.search-controls input:focus {
+  outline: none;
+  border-color: var(--dusty-300);
+  box-shadow: 0 0 0 3px rgba(191, 211, 223, 0.18);
+}
+
+.search-controls button {
+  background: linear-gradient(135deg, var(--dusty-500), var(--dusty-400));
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-group input::placeholder {
+  color: #7b98ab;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--dusty-300);
+  box-shadow: 0 0 0 3px rgba(191, 211, 223, 0.18);
+}
+
+#btn-simpan {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, var(--dusty-500), var(--dusty-400));
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+#btn-simpan:hover {
+  background: linear-gradient(135deg, var(--dusty-600), var(--dusty-300));
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(76, 104, 121, 0.45);
+}
+
+#btn-simpan:active {
+  transform: translateY(0);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid var(--garis);
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: linear-gradient(135deg, var(--dusty-700), var(--dusty-500));
+  color: #f0f5fd;
+  letter-spacing: 0.4px;
+}
+
+td {
+  color: #eaf3f7;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(191, 211, 223, 0.06);
+}
+
+tbody tr:hover {
+  background-color: rgba(191, 211, 223, 0.13);
+}
+
+/* Badge untuk kode barang */
+.badge-kode {
+  display: inline-block;
+  background: rgba(191, 211, 223, 0.12);
+  border: 1px solid rgba(191, 211, 223, 0.25);
+  color: #dfeaf1;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* Pesan saat belum ada data */
+.empty-state {
+  padding: 26px 10px;
+  text-align: center;
+  color: var(--teks-samar);
+  font-style: italic;
+}
+
+.btn-hapus {
+  background-color: transparent;
+  color: #ff8a93;
+  border: 1px solid rgba(224, 82, 99, 0.45);
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.btn-hapus:hover {
+  background-color: #e05263;
+  color: #ffffff;
+  border-color: #e05263;
+}
+
+@media (max-width: 540px) {
+  body {
+    padding: 14px;
+  }
+
+  .container {
+    padding: 22px;
+  }
+
+  .search-controls {
+    flex-direction: column;
+  }
+}

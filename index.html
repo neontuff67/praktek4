@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entry Data Barang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Form Entry Data Barang</h1>
+
+    <form id="form-barang">
+      <div class="form-group">
+        <label for="kode-barang">Kode Barang:</label>
+        <input type="text" id="kode-barang" placeholder="Contoh: BRG-001" required>
+      </div>
+
+      <div class="form-group">
+        <label for="nama-barang">Nama Barang:</label>
+        <input type="text" id="nama-barang" placeholder="Contoh: Laptop Asus" required>
+      </div>
+
+      <div class="form-group">
+        <label for="harga-barang">Harga Barang (Rp):</label>
+        <input type="number" id="harga-barang" placeholder="Contoh: 7500000" min="0" required>
+      </div>
+
+      <button type="submit" id="btn-simpan">Simpan Data</button>
+    </form>
+
+    <div class="search-box">
+      <label for="search-barang">Cari Barang:</label>
+      <div class="search-controls">
+        <input type="text" id="search-barang" placeholder="Cari kode atau nama barang">
+        <button type="button" id="btn-cari">Search</button>
+      </div>
+    </div>
+
+    <h2>Daftar Inventaris Barang</h2>
+
+    <table id="tabel-barang">
+      <thead>
+        <tr>
+          <th>No</th>
+          <th>Kode Barang</th>
+          <th>Nama Barang</th>
+          <th>Harga Barang</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody id="data-barang">
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
